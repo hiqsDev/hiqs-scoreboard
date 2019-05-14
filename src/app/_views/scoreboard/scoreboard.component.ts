@@ -1,5 +1,5 @@
-import { ScoreService } from './../_services/score.service';
-import { Score } from './../_models/score';
+import { ScoreService } from './../../_services/score.service';
+import { Score } from './../../_models/score';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-scoreboard',
