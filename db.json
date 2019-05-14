@@ -1,0 +1,8 @@
+{
+    "scores": [
+      { "player1": "Alice", "player2": "Bob", "score1": 10, "score2" : 6 },
+      { "player1": "John", "player2": "Jane", "score1": 4, "score2" : 10 },
+      { "player1": "John", "player2": "Jane", "score1": 8, "score2" : 10 },
+      { "player1": "Alice", "player2": "Bob", "score1": 5, "score2" : 10 }
+    ]
+  }

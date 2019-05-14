@@ -1,3 +1,4 @@
+import { ScoreService } from './../_services/score.service';
 import { Score } from './../_models/score';
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreboardComponent implements OnInit {
 
-  scores: Score[] = [new Score('Alice', 'Bob', 10, 6), new Score('John', 'Jane', 4, 10)];
+  scores: Score[] = [];
 
-  constructor() { }
+  constructor(private scoreService: ScoreService) { }
 
   ngOnInit() {
+    this.scoreService.getScores().subscribe(
+      data => this.scores = data
+    )
   }
-
+  
 }
