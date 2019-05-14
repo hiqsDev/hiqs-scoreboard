@@ -14,7 +14,7 @@ export class ScoreboardComponent implements OnInit {
 
   ngOnInit() {
     this.scoreService.getScores().subscribe(
-      data => this.scores = data
+      data => this.scores = data.reverse()
     )
   }
   

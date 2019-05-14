@@ -14,4 +14,8 @@ export class ScoreService {
   getScores(): Observable<Score[]> {
     return this.http.get<Score[]>('http://localhost:3000/scores');
   }
+
+  createScore(score: Score): Observable<Score> {
+    return this.http.post<Score>('http://localhost:3000/scores', score);
+  }
 }

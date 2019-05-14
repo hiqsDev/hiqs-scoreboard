@@ -1,3 +1,22 @@
-<p>
-  add-score works!
-</p>
+<form #f="ngForm" (ngSubmit)="onSubmitAddScore()">
+    <div>
+        <label>Player 1:</label>
+        <input type="text" [(ngModel)]="score.player1" name="player1" required>
+        <input type="number" [(ngModel)]="score.score1" name="score1" required>
+    </div>
+    <div>
+        <label>Player 2:</label>
+        <input type="text" [(ngModel)]="score.player2" name="player2" required>
+        <input type="number" [(ngModel)]="score.score2" name="score2" required>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!f.valid">Submit</button>
+    </div>
+</form>
+
+<div>
+  <p>
+    Your input:
+  </p>
+  <pre style="text-align: left; margin: 0 auto; width: fit-content">{{ score | json }}</pre>
+</div>
