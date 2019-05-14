@@ -5,6 +5,7 @@
       <th>SCORE</th>
       <th>SCORE</th>
       <th>NAME</th>
+      <th>OPTIONS</th>
     </tr>
     <tr *ngFor="let score of scores; let i = index;">
       <ng-container *ngIf="i < 5">
@@ -12,7 +13,9 @@
         <td>{{score.score1}}</td>
         <td>{{score.score2}}</td>
         <td>{{score.player2 | uppercase}}</td>
+        <td><a [routerLink]="" (click)="editScore(score)">Edit</a></td>
       </ng-container>
     </tr>
   </table>
 </div>
+<app-edit-score [scoreObservable]="scoreToEdit.asObservable()" (editEvent)="saveScore($event)"></app-edit-score>

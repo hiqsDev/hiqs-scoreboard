@@ -1,4 +1,5 @@
 export class Score {
+    public id?: number;
     public player1: string;
     public player2: string;
     public score1: number;

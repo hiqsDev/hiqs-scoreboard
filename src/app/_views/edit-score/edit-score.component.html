@@ -1,0 +1,13 @@
+<form *ngIf="editScoreForm" [formGroup]="editScoreForm" class="form" style="margin-top: 32px;">
+  <div class="form-group">
+    <label for="player1">Player 1: </label>
+    <input type="text" class="form-control" id="player1" name="player1" formControlName="player1">
+    <input type="text" class="form-control" id="player2" name="player2" formControlName="player2">
+  </div>
+  <div class="form-group">
+      <label for="player2">Player 2: </label>
+    <input type="number" class="form-control" id="score1" name="score1" formControlName="score1">
+    <input type="number" class="form-control" id="score2" name="score2" formControlName="score2">
+  </div>
+  <button type="button" (click)="onSubmitEditScore()">Submit</button>
+</form>

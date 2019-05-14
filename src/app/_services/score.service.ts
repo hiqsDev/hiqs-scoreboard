@@ -18,4 +18,8 @@ export class ScoreService {
   createScore(score: Score): Observable<Score> {
     return this.http.post<Score>('http://localhost:3000/scores', score);
   }
+
+  updateScore(score: Score): Observable<Score> {
+    return this.http.put<Score>(`http://localhost:3000/scores/${score.id}`, score);
+  }
 }
