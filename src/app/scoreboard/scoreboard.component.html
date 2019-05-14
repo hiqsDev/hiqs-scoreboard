@@ -1,0 +1,18 @@
+<div>
+  <table style="width: 50%; margin: 0 auto;">
+    <tr>
+      <th>NAME</th>
+      <th>SCORE</th>
+      <th>SCORE</th>
+      <th>NAME</th>
+    </tr>
+    <tr *ngFor="let score of scores; let i = index;">
+      <ng-container *ngIf="i < 5">
+        <td>{{score.player1 | uppercase}}</td>
+        <td>{{score.score1}}</td>
+        <td>{{score.score2}}</td>
+        <td>{{score.player2 | uppercase}}</td>
+      </ng-container>
+    </tr>
+  </table>
+</div>
