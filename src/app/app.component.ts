@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hiqs Scoreboard';
+  constructor(public translateService: TranslateService) {
+    translateService.addLangs(['de', 'fr']);
+    translateService.setDefaultLang('de');
+
+    const browserLang = translateService.getBrowserLang();
+    translateService.use(browserLang.match(/de|fr/) ? browserLang : 'de');
+  }
 }
