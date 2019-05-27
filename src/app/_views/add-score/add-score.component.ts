@@ -21,7 +21,7 @@ export class AddScoreComponent implements OnInit {
     this.scoreService.createScore(this.score).subscribe(
       data => {
         console.log(data);
-        this.router.navigate(['/scoreboard'])
+        this.router.navigate(['/scoreboard']);
       }
     );
   }

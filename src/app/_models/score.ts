@@ -12,4 +12,4 @@ export class Score {
       this.score2 = score2;
     }
   }
-  
+

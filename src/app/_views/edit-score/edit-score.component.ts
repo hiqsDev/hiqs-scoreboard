@@ -31,7 +31,7 @@ export class EditScoreComponent implements OnInit {
         this.createFormControls();
         this.createForm();
       }
-    )
+    );
   }
 
   createFormControls() {
@@ -47,7 +47,7 @@ export class EditScoreComponent implements OnInit {
       player2: this.player2,
       score1: this.score1,
       score2: this.score2
-    })
+    });
   }
 
   onSubmitEditScore() {
@@ -56,7 +56,7 @@ export class EditScoreComponent implements OnInit {
       this.player2.value,
       this.score1.value,
       this.score2.value
-    )
+    );
     tmpScore.id = this.score.id;
     this.editEvent.emit(tmpScore);
     this.editScoreForm = undefined;

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ScoreboardComponent } from './_views/scoreboard/scoreboard.component';
 import { AddScoreComponent } from './_views/add-score/add-score.component';
 import { EditScoreComponent } from './_views/edit-score/edit-score.component';
+import { ColorDirective } from './_shared/color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScoreboardComponent,
     AddScoreComponent,
-    EditScoreComponent
+    EditScoreComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export class ScoreboardComponent implements OnInit {
   getScores() {
     this.scoreService.getScores().subscribe(
       data => this.scores = data.reverse()
-    )
+    );
   }
 
   saveScore(score: Score) {
@@ -35,5 +35,5 @@ export class ScoreboardComponent implements OnInit {
   editScore(score: Score) {
     this.scoreToEdit.next(score);
   }
-  
+
 }
